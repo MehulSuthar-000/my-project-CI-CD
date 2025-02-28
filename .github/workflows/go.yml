@@ -25,11 +25,10 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build and Push Docker Image
+      - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./railAPIGin  
           push: true
-          tags: mehulsuthar/railapigin:latest
-          platforms: linux/amd64  # Change if using ARM (e.g., Raspberry Pi: linux/arm64)
+          tags: your-dockerhub-username/railapigin:latest
 
